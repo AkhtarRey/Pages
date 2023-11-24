@@ -55,11 +55,20 @@
         var point = L.geoJson(null, {
           onEachFeature: function (feature, layer) {
             var popupContent =
-              '<h4>' +
+              '<h4> Sumber Api: ' +
               feature.properties.sumber +
               '</h4>' +
-              '<p>' +
+              '<p> Kawasan: ' +
               feature.properties.kawasan +
+              '</p>' +
+              '<p> Wilayah: ' +
+              feature.properties.wilayah +
+              '</p>' +
+              '<p> Surveyor: ' +
+              feature.properties.penginput +
+              '</p>' +
+              '<p> Tanggal: ' +
+              feature.properties.timestamp +
               '</p>';
             layer.on({
               click: function (e) {
